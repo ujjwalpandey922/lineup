@@ -1,0 +1,105 @@
+.container{
+    width: 100%;
+    height: 55vh;
+    color: #fff;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border: 1px solid #fff;
+    overflow: hidden;
+    border-radius: 100px;
+}
+.left{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    padding-left: calc(var(--base-x) * 5.2);
+}
+.pretext{
+    display: flex;
+    align-items: center;
+    margin-bottom: calc(var(--base-y) * 1);
+}
+.pretext_text{
+    font-weight: 800;
+    font-size: calc(var(--base-y) * 1.5);
+    color: #636363;
+    margin-left: calc(var(--base-x) * 1);
+}
+.title{
+    font-weight: 600;
+    font-size: calc(var(--base-y) * 3);
+    margin-bottom: calc(var(--base-y) * 1.1);
+}
+.description{
+    font-size: calc(var(--base-y) * 2);
+    color: #fff;
+    font-weight: 300;
+    width: calc(var(--base-x) * 55);
+}
+.right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.right_video video{
+    width: calc(var(--base-x) * 53.6);
+    height: auto;
+}
+.right_image{
+    width: calc(var(--base-x) * 53.6);
+    height: calc(var(--base-x) * 30.6);
+    object-fit: cover;
+    overflow: hidden;
+    position: relative;
+}
+.pretext_icon_image{
+    width: calc(var(--base-x) * 3);
+    height: calc(var(--base-y) * 3);
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .container{
+        height: 60vh;
+        flex-direction: column;
+        border: none;
+        border-radius: 0;
+        /* align-items: flex-start; */
+    }
+    .left{
+        padding-left:0;
+    }
+    .pretext_icon_image{
+        width: calc(var(--base-x) * 1.7);
+        height: calc(var(--base-y) * 1.5);
+        position: relative;
+    }
+    .pretext_text{
+        font-size: calc(.9 * var(--base-x));
+    }
+    .title{
+        font-size: calc(2 * var(--base-x));
+        font-weight: 600;
+    }
+    .description{
+        font-size: calc(1.5 * var(--base-x));
+        font-weight: 200;
+        line-height: calc(var(--base-y) * 2.5);
+    }
+    .left{
+        margin-bottom: calc(var(--base-y) * 2);
+    }
+    .right_video video{
+        width: calc(var(--base-x) * 42.34);
+        height: auto;
+    }
+    .right_image{
+        width: calc(var(--base-x) * 42.34);
+        height: calc(var(--base-x) * 30.6);
+    }
+}

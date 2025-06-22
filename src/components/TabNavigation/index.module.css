@@ -1,0 +1,34 @@
+.container{
+    width: 100%;
+}
+.horizontal_line{
+    background-color: #fff;
+    height: 1px;
+    width: 100%;
+}
+.content{
+    display: flex;
+}
+
+.tab{
+    font-size: calc(2 * var(--base-x));
+    font-weight: 500;
+    padding-bottom: calc(2.3 * var(--base-y));
+    cursor: pointer;
+}
+.tab:not(:last-child){
+    margin-right: calc(var(--base-x) * 4.2);
+}
+.tab_active{
+    border-bottom: 3px solid #fff;
+    
+}
+
+@media (max-width: 768px) {
+    .tab{
+        font-size: calc(1.5 * var(--base-x));
+    }
+    .tab:not(:last-child){
+        margin-right: calc(var(--base-x) * 2);
+    }
+}

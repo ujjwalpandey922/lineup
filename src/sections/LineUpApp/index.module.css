@@ -1,0 +1,82 @@
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: #000000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+    padding: calc(var(--base-y) * 11.6) calc(var(--base-y) * .8) calc(var(--base-y) * 1) calc(var(--base-y) * 6.2);
+    position: relative;
+}
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    color: #fff;
+    font-size: calc(var(--base-x) * 5);
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: calc(var(--base-y) * 5.5);
+    position: relative;
+    z-index: 2;
+}
+.content{
+    width: 100%;
+    height: calc(100vh - calc(var(--base-y) * 20));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-y: auto;
+    position: relative;
+    z-index: 1;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+.content::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+.navigation{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    position: sticky;
+    top: 0;
+    background-color: #000000;
+    padding: calc(var(--base-y) * 2) 0;
+    z-index: 2;
+}
+.tab{
+    width: 100%;
+    position: relative;
+    padding-bottom: calc(var(--base-y) * 4);
+}
+
+/* Add a gradient fade at the bottom of the scrollable area */
+.content::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to bottom, transparent, #000000);
+    pointer-events: none;
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .container{
+        padding: calc(var(--base-y) * 11) calc(var(--base-x) * .8) calc(var(--base-y) * 1) calc(var(--base-x) * 3);
+    }
+    .header{
+        font-size: calc(2 * var(--base-x));
+        margin-bottom: calc(var(--base-y) * 3);
+    }
+    .tab{
+        padding-bottom: calc(var(--base-y) * 2);
+    }
+}
