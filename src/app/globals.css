@@ -11,6 +11,9 @@ html,body{
   font-size:10px;
   font-family: 'Montserrat', sans-serif;
 }
+html {
+  scroll-behavior: smooth;
+}
 :root{
   --base-x:10px;
   --base-y:10px;

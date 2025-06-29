@@ -43,14 +43,44 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+    padding: 10px 0;
 }
-.header_right_container_item:not(:last-child){
-    margin-right: calc(var(--base-x) * 2.6);
+
+.header_right_container_item:hover {
+    opacity: 0.8;
 }
-.header_right_container_item_button{
+
+.header_right_container_item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.3s ease;
+}
+
+.header_right_container_item:hover::after {
+    width: 100%;
+}
+
+.header_right_container_item_button {
     padding: calc(var(--base-x) * .8) calc(var(--base-y) * 2);
     background-color: #D9D9D93B;
     border-radius: calc(var(--base-x) * 2);
+    transition: all 0.3s ease;
+}
+
+.header_right_container_item_button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+.header_right_container_item:not(:last-child){
+    margin-right: calc(var(--base-x) * 2.6);
 }
 
 .hamburger {

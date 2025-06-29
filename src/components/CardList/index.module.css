@@ -1,14 +1,14 @@
-.container{
+.container {
     position: relative;
     width: 100%;
-    padding-right: calc(var(--base-x) * 6.2);
-    margin-top: calc(var(--base-y) * 4);
+    min-height: 100vh;
+    padding: 2rem;
 }
-.card_container{
-    /* position: sticky; */
-    /* top: calc(9 * var(--base-y)); */
-    width: 100%;
-    margin-bottom: calc(var(--base-y) * 4);
+
+.card_container {
+    margin-bottom: 4rem; /* Space between cards */
+    will-change: transform, opacity;
+    position: relative;
 }
 
 @media (max-width: 768px) {

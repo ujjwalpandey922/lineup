@@ -16,13 +16,17 @@ import ForMembersPhone from '@/sections/ForMembersPhone';
 import JoinUsPhone from '@/sections/JoinUsPhone';
 
 const SlideShow = () => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 750);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    // This code will only run on the client side
     const handleResize = () => {
       setIsMobile(window.innerWidth < 750);
     };
-
+    
+    // Set initial value
+    handleResize();
+    
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
@@ -54,55 +58,52 @@ const SlideShow = () => {
     <>
     <Header />
     <div className="slideshow-container">
-      {/* {slides.map((slide, index) => (
-        <div key={index} className={`slide ${slide.className}`}>
-          <h2>{slide.title}</h2>
-          {slide.description && <p>{slide.description}</p>}
-        </div>
-      ))} */}
-      <div className={'slide'}>
+      <div className="slide" id="home">
         <Hero />
       </div>
       {!isMobile && (
         <>
-          <div className={'slide'}>
+          <div className="slide">
             <NewEra/>
           </div>
-          <div className={'slide'}>
+          <div className="slide">
             <ForOrgs/>
           </div>
-          <div className={'slide'}>
+          <div className="slide">
             <ForMembers/>
           </div>
         </>
       )}
       {isMobile && (
         <>
-          <div className={'slide'}>
+          <div className="slide">
             <ForOrgsPhone/>
           </div>
-          <div className={'slide'}>
+          <div className="slide">
             <ForMembersPhone/>
           </div>
-
         </>
       )}
-      <div className={'slide'}>
+      <div className="long_slide" id="lineup-app">
         <LineUpApp/>
       </div>
-      <div className={'slide'}>
+      <div className="slide" id="how-it-works">
         <HowTo/>
       </div>
-      <div className={'slide'}>
+      <div className="slide" id="whos-lineup">
         <LineupFor/>
       </div>
-      {!isMobile && (<div className={'slide'}>
-        <JoinUs/>
-      </div>)}
-      {isMobile && (<div className={'slide'}>
-        <JoinUsPhone/>
-      </div>)}
-      <div className={'slide'}>
+      {!isMobile && (
+        <div className="slide" id="join-us">
+          <JoinUs/>
+        </div>
+      )}
+      {isMobile && (
+        <div className="slide" id="join-us">
+          <JoinUsPhone/>
+        </div>
+      )}
+      <div className="slide">
         <Footer/>
       </div>
     </div>

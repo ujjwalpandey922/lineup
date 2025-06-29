@@ -1,5 +1,6 @@
 .container{
     width: 100%;
+    padding: calc(var(--base-y) * 2) calc(var(--base-x) * 2);
 }
 .horizontal_line{
     background-color: #fff;
