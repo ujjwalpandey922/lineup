@@ -9,16 +9,11 @@ const JoinUsPhone = () => {
             </div>
             <div className={styles.content}>
                 <div className={styles.text_wrapper}>
-                    {/* <div className={styles.bg_video_text}>
-                        <video src="/hero.mp4" autoPlay loop muted/>
-                    </div> */}
-                    <div className={styles.text}>
-                        <div className={styles.heading}>
-                            Join us now
-                        </div>
-                        <div className={styles.description}>
-                            …and work with us to change how the world experiences music.
-                        </div>
+                    <div className={styles.heading}>
+                        Join us now
+                    </div>
+                    <div className={styles.description}>
+                        …and work with us to change how the world experiences music.
                     </div>
                 </div>
                 <div className={styles.image_wrapper}>

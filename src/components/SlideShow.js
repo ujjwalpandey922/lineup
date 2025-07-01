@@ -30,30 +30,7 @@ const SlideShow = () => {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
-
-  const slides = [
-    {
-      title: 'The First slide',
-      description: 'Scroll Down for next slide',
-      className: 'first',
-    },
-    {
-      title: 'The Second slide',
-      description: 'Scroll Down for next slide',
-      className: 'second',
-    },
-    {
-      title: 'The Third slide',
-      description: 'Scroll Down',
-      className: 'third',
-    },
-    {
-      title: 'The Fourth slide',
-      description: '',
-      className: 'fourth',
-    },
-  ];
-
+ 
   return (
     <>
       <Header />
@@ -93,12 +70,11 @@ const SlideShow = () => {
         <div className="slide" id="how-it-works">
           <HowTo />
         </div>
-        {!isMobile && (
+        {!isMobile ? (
           <div className="slide" id="join-us">
             <JoinUs />
           </div>
-        )}
-        {isMobile && (
+        ) : (
           <div className="slide" id="join-us">
             <JoinUsPhone />
           </div>

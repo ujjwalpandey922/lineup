@@ -42,9 +42,9 @@ const Hero = () => {
                         <div className={styles.lineup_text_container}>
                             {/* Text that defines the shape */}
                             <div className={styles.hero_content_text_lineup}>LINEUP</div>
-                            <div className={styles.hero_content_text_subtitle}>
+                            {/* <div className={styles.hero_content_text_subtitle}>
                                 The first all in one hub for event organization
-                            </div>
+                            </div> */}
                             {/* Clear video that will be masked by the text shape */}
                             <video
                                 src="/hero.mp4"
@@ -55,7 +55,7 @@ const Hero = () => {
                                 className={styles.lineup_text_video}
                             />
                         </div>
-                        <div><span ref={el} /></div>
+                        {/* <div><span ref={el} /></div> */}
                     </div>
                     
                     <div className={styles.hero_content_button}>

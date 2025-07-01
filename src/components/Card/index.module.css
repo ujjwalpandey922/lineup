@@ -1,6 +1,6 @@
 .card {
   width: 100%;
-  max-width: 1200px;
+  /* max-width: 1200px; */
   height: 80vh;
   background: rgb(0, 0, 0); /* More opaque background */
   border-radius: 100px;
@@ -132,9 +132,18 @@
 @media (max-width: 768px) {
   .card {
     height: auto;
-    min-height: 60vh;
-  }
+    padding: 2rem;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    border-radius: 0;
+    backdrop-filter: none;
 
+    /* min-height: 60vh; */
+  }
+  .card::before {
+    display: none;
+  }
   .cardContent {
     flex-direction: column;
     padding: 2rem;
@@ -150,13 +159,14 @@
   }
 
   .imageContainer {
-    height: 250px;
+    height:500px;
+    margin-top: 2rem;
   }
 }
 
 @media (max-width: 480px) {
   .cardContent {
-    padding: 1.5rem;
+    padding: 0;
   }
 
   .title {
@@ -166,8 +176,5 @@
   .description {
     font-size: 0.9rem;
   }
-
-  .imageContainer {
-    height: 200px;
-  }
+ 
 }

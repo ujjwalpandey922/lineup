@@ -1,6 +1,6 @@
 .container{
     width: 100%;
-    padding: calc(var(--base-y) * 2) calc(var(--base-x) * 2);
+    padding: 1rem;
 }
 .horizontal_line{
     background-color: #fff;
@@ -16,10 +16,9 @@
     font-weight: 500;
     padding-bottom: calc(2.3 * var(--base-y));
     cursor: pointer;
+    width: fit-content;
 }
-.tab:not(:last-child){
-    margin-right: calc(var(--base-x) * 4.2);
-}
+ 
 .tab_active{
     border-bottom: 3px solid #fff;
     
