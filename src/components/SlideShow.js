@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import React, { useState, useEffect } from 'react';
 import './SlideShow.css';
 import Header from '../sections/Header';
@@ -23,10 +23,10 @@ const SlideShow = () => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 750);
     };
-    
+
     // Set initial value
     handleResize();
-    
+
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
@@ -56,57 +56,57 @@ const SlideShow = () => {
 
   return (
     <>
-    <Header />
-    <div className="slideshow-container">
-      <div className="slide" id="home">
-        <Hero />
-      </div>
-      {!isMobile && (
-        <>
-          <div className="slide">
-            <NewEra/>
-          </div>
-          <div className="slide">
-            <ForOrgs/>
-          </div>
-          <div className="slide">
-            <ForMembers/>
-          </div>
-        </>
-      )}
-      {isMobile && (
-        <>
-          <div className="slide">
-            <ForOrgsPhone/>
-          </div>
-          <div className="slide">
-            <ForMembersPhone/>
-          </div>
-        </>
-      )}
-      <div className="long_slide" id="lineup-app">
-        <LineUpApp/>
-      </div>
-      <div className="slide" id="how-it-works">
-        <HowTo/>
-      </div>
-      <div className="slide" id="whos-lineup">
-        <LineupFor/>
-      </div>
-      {!isMobile && (
-        <div className="slide" id="join-us">
-          <JoinUs/>
+      <Header />
+      <div className="slideshow-container">
+        <div className="slide" id="home">
+          <Hero />
         </div>
-      )}
-      {isMobile && (
-        <div className="slide" id="join-us">
-          <JoinUsPhone/>
+        {!isMobile && (
+          <>
+            <div className="slide">
+              <NewEra />
+            </div>
+            <div className="slide">
+              <ForOrgs />
+            </div>
+            <div className="slide">
+              <ForMembers />
+            </div>
+          </>
+        )}
+        {isMobile && (
+          <>
+            <div className="slide">
+              <ForOrgsPhone />
+            </div>
+            <div className="slide">
+              <ForMembersPhone />
+            </div>
+          </>
+        )}
+        <div id="lineup-app">
+          <LineUpApp />
         </div>
-      )}
-      <div className="slide">
-        <Footer/>
+        <div className="slide" id="whos-lineup">
+          <LineupFor />
+        </div>
+        <div className="slide" id="how-it-works">
+          <HowTo />
+        </div>
+        {!isMobile && (
+          <div className="slide" id="join-us">
+            <JoinUs />
+          </div>
+        )}
+        {isMobile && (
+          <div className="slide" id="join-us">
+            <JoinUsPhone />
+          </div>
+        )}
+        <div className="slide">
+          <Footer />
+        </div>
       </div>
-    </div>
     </>
   );
 };

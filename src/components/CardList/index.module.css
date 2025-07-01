@@ -1,18 +1,16 @@
 .container {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    padding: 2rem;
+  position: relative;
+  width: 100%;
 }
 
-.card_container {
-    margin-bottom: 4rem; /* Space between cards */
-    will-change: transform, opacity;
-    position: relative;
-}
+/* .card_container {
+  margin-bottom: 4rem; /* Space between cards */
+/* will-change: transform, opacity;
+  position: relative;
+} */
 
-@media (max-width: 768px) {
-    .card_container{
-        margin-bottom: calc(var(--base-y) * 8);
-    }
-}
+/* @media (max-width: 768px) {
+  .card_container {
+    margin-bottom: calc(var(--base-y) * 8);
+  }
+} */

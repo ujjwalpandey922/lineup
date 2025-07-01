@@ -1,20 +1,11 @@
 /* Main container */
 .slideshow-container {
-    position: relative;
-  }
-  
-  /* Sticky full-screen slide section */
-  .slide {
-    position: sticky;
-    top: 0;
-    height: 100vh;
-  }
+  position: relative;
+}
 
-  .long_slide{
-    position: sticky;
-    top: 0;
-    min-height: 100vh;
-    height: fit-content;
-  }
-  
-  
+/* Sticky full-screen slide section */
+.slide {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}

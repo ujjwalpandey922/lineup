@@ -3,8 +3,8 @@ import AnimatedCard from '../components/AnimatedCard';
 
 export default function Home() {
   return (
-    <main>
-      <SlideShow />;
-    </main>
+    // <main>
+    <SlideShow />
+    // </main>
   );
 }
