@@ -1,27 +1,8 @@
-"use client";
-import { useEffect, useRef } from "react";
-import Typed from "typed.js";
+"use client"; 
 import styles from "./index.module.css";
 
 const Hero = () => {
-    const el = useRef(null);
-
-    useEffect(() => {
-        const typed = new Typed(el.current, {
-            strings: [
-                "The first all in one hub for event organization",
-                "Sell tickets, book artists, and grow your audience.",
-                "Your event, your way."
-            ],
-            typeSpeed: 50,
-            backSpeed: 50,
-            loop: true,
-        });
-
-        return () => {
-            typed.destroy();
-        };
-    }, []);
+ 
 
     return (
         <div className={styles.hero}>
