@@ -1,147 +1,150 @@
 .container {
-    width: 100%;
-    height: 100vh; /* Full viewport height */
-    background-color: #000000;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
-    box-sizing: border-box;
-    overflow: hidden;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  background-color: #000000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .heading {
-    font-size: 5rem;
-    font-weight: 900;
-    text-transform: uppercase;
-    margin-top: calc(var(--base-y) * 11.6);
-    margin-bottom: calc(var(--base-y) * 5.5);
-    text-align: left;
+  font-size: 5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-top: calc(var(--base-y) * 11.6);
+  margin-bottom: calc(var(--base-y) * 5.5);
+  text-align: left;
 }
 
 .content {
-    display: flex;
-    flex-direction: column;
-    height: calc(100% - 7rem); /* Account for heading space */
-    gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 7rem); /* Account for heading space */
+  gap: 1rem;
 }
 
 .phone_screens {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    height: 50%;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  height: 50%;
+  align-items: center;
 }
 
 .phone_screen {
-    position: relative;
-    width: 15%;
-    height: 80%;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    border-radius: 1rem;
-    overflow: hidden;
+  position: relative;
+  width: 15%;
+  height: 80%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 1rem;
+  overflow: hidden;
 }
 
 .phone_screen:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .active {
-    width: 25%;
-    height: 100%;
-    z-index: 2;
+  width: 25%;
+  height: 100%;
+  z-index: 2;
 }
 
 .text {
-    /* height: 40%; */
-    display: flex;
-    justify-content: center;
-    align-items: start    ;
+  /* height: 40%; */
+  display: flex;
+  justify-content: center;
+  align-items: start;
 }
 
 .text_content {
-    text-align: center;
-    max-width: 800px;
-    padding: 0 2rem;
+  text-align: center;
+  max-width: 800px;
+  padding: 0 2rem;
 }
 
 .text_content_heading {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+  font-size: 50px;
+  font-weight: 600;
+  margin-bottom: 1rem;
 }
 
 .text_content_subheading {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #797878;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
+  font-size: 15px;
+  font-weight: 600;
+  color: #797878;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
 }
 
 .text_content_description {
-    font-size:  2rem;
-    padding-top: 2rem;
-    line-height: 1.6;
+  font-size: 20px;
+  font-weight: 400;
+  padding-top: 2rem;
+  line-height: 1.6;
+  text-align: center;
 }
 
 @media (max-width: 768px) {
-    .container {
-        height: auto;
-        min-height: 100vh;
-        padding: 1rem;
-    }
-    
-    .heading {
-        font-size: 1.8rem;
-        margin-bottom: 1rem;
-    }
-    
-    .content {
-        width: 100%;
-        flex-direction: column;
-        height: auto;
-        overflow: hidden;
-    }
-    
-    .phone_screens {
-        /* flex-direction: column; */
-        width: 100%;
-        height: 100%;
-        gap: 0.5rem;
-        overflow: auto;
-    }
-    
-    .phone_screen {
-        min-width: 400px;
-        height: 500px;
-    }
-    
-    /* .active {
+  .container {
+    height: auto;
+    min-height: 100vh;
+    padding: 1rem;
+  }
+
+  .heading {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .content {
+    width: 100%;
+    flex-direction: column;
+    height: auto;
+    overflow: hidden;
+  }
+
+  .phone_screens {
+    /* flex-direction: column; */
+    width: 100%;
+    height: 100%;
+    gap: 0.5rem;
+    overflow: auto;
+  }
+
+  .phone_screen {
+    min-width: 400px;
+    height: 500px;
+  }
+
+  /* .active {
         width: 90%;
         height: 200px;
     } */
-    
-    .text {
-        height: auto;
-        margin: 1rem 0;
-    }
-    
-    .text_content_heading {
-        font-size: 1.8rem;
-    }
-    
-    .text_content_subheading {
-        font-size: 1rem;
-    }
-    
-    .text_content_description {
-        font-size: 1rem;
-    }
+
+  .text {
+    height: auto;
+    margin: 1rem 0;
+  }
+
+  .text_content_heading {
+    font-size: 1.8rem;
+  }
+
+  .text_content_subheading {
+    font-size: 1rem;
+  }
+
+  .text_content_description {
+    font-size: 1rem;
+  }
 }
 
 /* Hide scrollbar for WebKit browsers */
 .phone_screens::-webkit-scrollbar {
-    display: none;
+  display: none;
 }

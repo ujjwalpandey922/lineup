@@ -1,118 +1,115 @@
-.container{
-    width: 100%;
-    height: 100%;
-    color: #fff;
-    position: relative;
-    overflow: hidden;
+.container {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
 }
 
 .video_background {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 .background_video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transform: scale(1.2);
-    filter: blur(100px);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.2);
+  filter: blur(100px);
 }
 
 .glass_overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 
-        0 4px 30px rgba(0, 0, 0, 0.1),
-        inset 0 0 20px rgba(255, 255, 255, 0.05);
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1),
+    inset 0 0 20px rgba(255, 255, 255, 0.05);
 }
 
 .content_wrapper {
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    padding: 0 calc(var(--base-x) * 9);
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 calc(var(--base-x) * 9);
 }
 
-.top{
-    width: 100%;
-    display: flex;
-    height: 85%;
+.top {
+  width: 100%;
+  display: flex;
+  height: 85%;
 }
 
-.left{
-    width: 50%;
+.left {
+  width: 50%;
 }
 
-.content{
-    display: flex;
-    flex-direction: column;
-    margin-top: calc(18.1 * var(--base-y));
+.content {
+  display: flex;
+  flex-direction: column;
+  margin-top: calc(18.1 * var(--base-y));
 }
 
-.heading{
-    font-size: calc(var(--base-y) * 10);
-    font-weight: 700;
-    width: calc(var(--base-x) * 40);
-    margin-bottom: calc(var(--base-y) * 2.4);
+.heading {
+  font-size: 100px;
+  font-weight: 700;
+  width: calc(var(--base-x) * 40);
+  margin-bottom: calc(var(--base-y) * 2.4);
 }
 
-.description{
-    font-size: calc(var(--base-y) * 2);
-    font-weight: 700;
-    text-transform: uppercase;
-    width: calc(var(--base-x) * 42);
+.description {
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  width: calc(var(--base-x) * 42);
 }
 
-.right{
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.right {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.image{
-    position: relative;
-    width: calc(var(--base-x) * 70);
-    height: calc(var(--base-y) * 54.3);
+.image {
+  position: relative;
+  width: calc(var(--base-x) * 70);
+  height: calc(var(--base-y) * 54.3);
 }
 
-.bottom{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    font-size: calc(var(--base-y) * 2);
-    font-weight: 500;
+.bottom {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: calc(var(--base-y) * 2);
+  font-weight: 500;
 }
 
-.button{
-    padding: calc(var(--base-y) * 1.4) calc(var(--base-x) * 7);
-    background: rgba(227, 227, 227, 0.15);
-    border-radius: calc(var(--base-x) * 10);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 
-        0 4px 30px rgba(0, 0, 0, 0.1),
-        inset 0 0 20px rgba(255, 255, 255, 0.05);
-    transition: all 0.3s ease;
+.button {
+  padding: calc(var(--base-y) * 1.4) calc(var(--base-x) * 7);
+  background: rgba(227, 227, 227, 0.15);
+  border-radius: calc(var(--base-x) * 10);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1),
+    inset 0 0 20px rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
 }
 
 .button:hover {
-    background: rgba(227, 227, 227, 0.25);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 
-        0 4px 30px rgba(0, 0, 0, 0.2),
-        inset 0 0 30px rgba(255, 255, 255, 0.1);
-    transform: translateY(-2px);
+  background: rgba(227, 227, 227, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2),
+    inset 0 0 30px rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
 }

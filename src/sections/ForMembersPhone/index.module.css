@@ -7,9 +7,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
-  /* // TEMP FIX  */
-  overflow: hidden;
 }
 .content_wrapper {
   margin-top: calc(10.8 * var(--base-y));
@@ -93,7 +90,7 @@
   margin-bottom: calc(3.5 * var(--base-y));
 }
 .bottom_text {
-  width: 100vw;
+  width: 100%;
   padding: 0 calc(2.9 * var(--base-x));
   margin-bottom: calc(10 * var(--base-y));
 }

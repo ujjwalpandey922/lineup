@@ -1,14 +1,15 @@
 .card {
   width: 100%;
   /* max-width: 1200px; */
-  height: 80vh;
+  /* height: 80vh; */
   background: rgb(0, 0, 0); /* More opaque background */
-  border-radius: 100px;
+  border-radius: 50px;
   backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.753);
   overflow: hidden;
   box-shadow: 0 25px 45px rgba(0, 0, 0, 0.3);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  top: 300px;
 }
 
 /* Add a solid background overlay to ensure full opacity */
@@ -56,16 +57,18 @@
 }
 
 .pretextText {
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: rgba(255, 255, 255, 0.8);
+  font-size: 15px;
+  font-weight: 800;
+  color: #636363;
+  line-height: 1.2;
+  margin: 0;
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
 
 .title {
-  font-size: 2.5rem;
-  font-weight: 800;
+  font-size: 30px;
+  font-weight: 600;
   color: white;
   line-height: 1.2;
   margin: 0;
@@ -76,9 +79,9 @@
 }
 
 .description {
-  font-size: 1.1rem;
+  font-size: 20px;
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.856);
   margin: 0;
   font-weight: 400;
 }
@@ -139,7 +142,7 @@
     border-radius: 0;
     backdrop-filter: none;
 
-    /* min-height: 60vh; */
+    top: 150px;
   }
   .card::before {
     display: none;
@@ -151,16 +154,19 @@
   }
 
   .title {
-    font-size: 2rem;
-  }
-
-  .description {
-    font-size: 1rem;
+    font-size: 20px;
   }
 
   .imageContainer {
-    height:500px;
+    height: 500px;
     margin-top: 2rem;
+  }
+  .pretextText {
+    font-size: 15px;
+  }
+  .pretextImage {
+    width: 20px;
+    height: 20px;
   }
 }
 
@@ -168,13 +174,4 @@
   .cardContent {
     padding: 0;
   }
-
-  .title {
-    font-size: 1.5rem;
-  }
-
-  .description {
-    font-size: 0.9rem;
-  }
- 
 }

@@ -145,9 +145,9 @@ const LineUpApp = () => {
         <TabNavigation onTabClick={handleTabClick} currentTab={currentTab} />
       </div>
       <div className={styles.cardsContainer}>
-        <div style={{ paddingTop: '20px' }}>
-          <CardList data={data[currentTab]} tab={currentTab} />
-        </div>
+        {/* <div style={{ paddingTop: '20px' }}> */}
+        <CardList data={data[currentTab]} tab={currentTab} />
+        {/* </div> */}
       </div>
       {/* THIS IS A WORK AROUND TO NOT SHOW THE TITLE N HEADER OF THIS SECTION  */}
       <div

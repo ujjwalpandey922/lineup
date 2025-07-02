@@ -32,3 +32,11 @@
     gap: 2rem;
   }
 }
+@media (max-width: 400px) {
+  .tab {
+    font-size: calc(1.33 * var(--base-x));
+  }
+  .content {
+    gap: 2rem;
+  }
+}
