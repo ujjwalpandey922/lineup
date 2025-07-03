@@ -14,6 +14,7 @@ import LineupFor from '@/sections/LineupFor';
 import ForOrgsPhone from '@/sections/ForOrgsPhone';
 import ForMembersPhone from '@/sections/ForMembersPhone';
 import JoinUsPhone from '@/sections/JoinUsPhone';
+import { Button } from './ui/button';
 
 const SlideShow = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -30,7 +31,7 @@ const SlideShow = () => {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
- 
+
   return (
     <>
       <Header />

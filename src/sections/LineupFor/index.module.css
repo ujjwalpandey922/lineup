@@ -14,7 +14,7 @@
   font-size: 5rem;
   font-weight: 900;
   text-transform: uppercase;
-  margin-top: calc(var(--base-y) * 11.6);
+  margin-top: calc(var(--base-y) * 5.6);
   margin-bottom: calc(var(--base-y) * 5.5);
   text-align: left;
 }

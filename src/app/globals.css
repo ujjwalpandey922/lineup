@@ -1,54 +1,59 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-main{
+@import 'tailwindcss';
+
+main {
   background-color: #000000;
 }
-*,*::before,*::after{
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-html,body{
-  font-size:10px;
+html,
+body {
+  font-size: 10px;
   font-family: 'Montserrat', sans-serif;
 }
 html {
   scroll-behavior: smooth;
 }
-:root{
-  --base-x:10px;
-  --base-y:10px;
+:root {
+  --base-x: 10px;
+  --base-y: 10px;
 }
 
 @media only screen and (min-width: 1800px) and (max-width: 1920px) {
-  :root{
-    --base-x:14px;
-    --base-y:14px;
+  :root {
+    --base-x: 14px;
+    --base-y: 14px;
   }
 }
 @media only screen and (min-width: 1700px) and (max-width: 1800px) {
-  :root{
-    --base-x:13px;
-    --base-y:13px;
+  :root {
+    --base-x: 13px;
+    --base-y: 13px;
   }
 }
 
 @media only screen and (max-width: 1200px) {
-  :root{
-    --base-x:9px;
-    --base-y:9px;
+  :root {
+    --base-x: 9px;
+    --base-y: 9px;
   }
 }
 
 @media only screen and (max-width: 900px) {
-  :root{
-    --base-x:8px;
-    --base-y:8px;
+  :root {
+    --base-x: 8px;
+    --base-y: 8px;
   }
 }
 
-@media only screen and (max-width: 750px){
-  :root{
-    --base-x:10px;
-    --base-y:10px;
+@media only screen and (max-width: 750px) {
+  :root {
+    --base-x: 10px;
+    --base-y: 10px;
   }
 }
