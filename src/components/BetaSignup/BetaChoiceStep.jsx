@@ -1,17 +1,16 @@
 'use client';
 
 import { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
-import { Label } from '@/components/ui/label';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
+import styles from './BetaChoiceStep.module.css';
+import { useRouter } from 'next/navigation';
 
-const BetaChoiceStep = ({ wantsBeta, onBetaChoice, onBack }) => {
+const BetaChoiceStep = ({ wantsBeta, onBetaChoice }) => {
   const [selectedValue, setSelectedValue] = useState(
     wantsBeta === true ? 'yes' : wantsBeta === false ? 'no' : ''
   );
 
+  const navTo = useRouter();
   const handleValueChange = (value) => {
     setSelectedValue(value);
   };
@@ -25,84 +24,89 @@ const BetaChoiceStep = ({ wantsBeta, onBetaChoice, onBack }) => {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white flex">
+    <div className={styles.container}>
       {/* Left section */}
-      <div className="w-3/5 flex flex-col justify-center px-16">
-        <div className="max-w-md mx-auto space-y-12">
+      <div className={styles.leftSection}>
+        <div className={styles.contentWrapper}>
           {/* Logo */}
-          <div>
-            <Image src="/logo.png" alt="LineUp Logo" width={64} height={64} />
+          <div className={styles.logoContainer}>
+            <Image
+              src="/logo.png"
+              alt="LineUp Logo"
+              width={64}
+              height={64}
+              className={styles.logo}
+            />
           </div>
 
           {/* Question */}
-          <h1 className="text-2xl font-semibold">
-            Want to be part of our beta test?
-          </h1>
+          <h1 className={styles.title}>Want to be part of our beta test?</h1>
 
           {/* Radio Buttons */}
-          <RadioGroup
-            value={selectedValue}
-            onValueChange={handleValueChange}
-            className="space-y-6"
-          >
-            <div className="flex items-center space-x-3 cursor-pointer">
-              <RadioGroupItem
-                value="yes"
+          <div className={styles.radioGroup}>
+            <div className={styles.radioItem}>
+              <input
+                type="radio"
                 id="yes"
-                className="border-white data-[state=checked]:bg-white data-[state=checked]:border-white"
+                name="betaChoice"
+                value="yes"
+                checked={selectedValue === 'yes'}
+                onChange={(e) => handleValueChange(e.target.value)}
+                className={styles.radioInput}
               />
-              <Label
-                htmlFor="yes"
-                className="text-base font-normal text-white cursor-pointer"
-              >
+              <label htmlFor="yes" className={styles.radioLabel}>
                 Yes
-              </Label>
+              </label>
             </div>
 
-            <div className="flex items-center space-x-3 cursor-pointer">
-              <RadioGroupItem
-                value="no"
+            <div className={styles.radioItem}>
+              <input
+                type="radio"
                 id="no"
-                className="border-white data-[state=checked]:bg-white data-[state=checked]:border-white"
+                name="betaChoice"
+                value="no"
+                checked={selectedValue === 'no'}
+                onChange={(e) => handleValueChange(e.target.value)}
+                className={styles.radioInput}
               />
-              <Label
-                htmlFor="no"
-                className="text-base font-normal text-white cursor-pointer"
-              >
+              <label htmlFor="no" className={styles.radioLabel}>
                 No
-              </Label>
+              </label>
             </div>
-          </RadioGroup>
+          </div>
 
           {/* Navigation buttons */}
-          <div className="flex justify-between items-center pt-4">
-            <Button
-              onClick={onBack}
-              variant="outline"
-              className="px-6 py-2 border-white text-white rounded-md hover:bg-white/10"
+          <div className={styles.navigationContainer}>
+            <button
+              onClick={() => {
+                navTo.push('/');
+              }}
+              className={styles.backButton}
             >
-              <ChevronLeft className="w-4 h-4 mr-2" />
+              {/* <ChevronLeft className={styles.buttonIcon} /> */}
               Back
-            </Button>
+            </button>
 
-            <Button
+            <button
               onClick={handleNext}
               disabled={!selectedValue}
-              className="px-6 py-2 bg-white text-black rounded-md hover:bg-gray-200 font-semibold"
+              className={`${styles.nextButton} ${
+                !selectedValue ? styles.nextButtonDisabled : ''
+              }`}
             >
               Next
-              <ChevronRight className="w-4 h-4 ml-2" />
-            </Button>
+              {/* <ChevronRight className={styles.buttonIcon} /> */}
+            </button>
           </div>
         </div>
       </div>
 
       {/* Right side - Phone mockup */}
-      <div className="w-2/5 relative">
+      <div className={styles.rightSection}>
         <Image
           src="/phone.png"
           alt="Phone mockup"
-          className="h-full w-full object-cover"
+          className={styles.phoneImage}
           width={400}
           height={400}
         />
