@@ -7,7 +7,7 @@ import UserInfoStep from '@/components/BetaSignup/UserInfoStep';
 import ThankYouStep from '@/components/BetaSignup/ThankYouStep';
 
 const BetaSignupForm = () => {
-  const [step, setStep] = useState(2);
+  const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
     name: '',
     surname: '',
