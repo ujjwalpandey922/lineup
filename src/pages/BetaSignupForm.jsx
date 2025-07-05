@@ -39,11 +39,15 @@ const BetaSignupForm = () => {
     setIsSubmitting(true);
 
     try {
-      await axios.post('https://api.lineup-events.com/api/leads', formData);
+      const res = await axios.post(
+        'https://api.lineup-events.com/api/leads',
+        formData
+      );
+      if (res.status !== 201) throw new Error('Submission failed');
+
       setStep(3);
     } catch (error) {
       console.error('Submission error:', error);
-      // TODO: Add proper error handling (toast, etc.)
     } finally {
       setIsSubmitting(false);
     }

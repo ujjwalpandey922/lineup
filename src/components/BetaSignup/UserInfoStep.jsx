@@ -89,9 +89,6 @@ const UserInfoStep = ({
                   placeholder="Email address"
                 />
               </div>
-            </div>
-
-            <div className={styles.formRow}>
               <div className={styles.formGroup}>
                 <label htmlFor="surname" className={styles.label}>
                   Surname*
@@ -136,7 +133,6 @@ const UserInfoStep = ({
                 </div>
               </div>
             </div>
-
             {/* Navigation buttons */}
             <div className={styles.navigationContainer}>
               <button

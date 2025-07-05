@@ -75,8 +75,8 @@
 .formRow {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-  width: 80%;
+  gap: 2rem;
+  width: 85%;
 }
 
 .formGroup {
@@ -100,6 +100,7 @@
   color: #ffffff;
   font-size: 18px;
   transition: all 0.2s ease;
+  width: 100%;
 }
 
 .input::placeholder {
@@ -149,6 +150,7 @@
   color: #ffffff;
   font-size: 18px;
   transition: all 0.2s ease;
+  width: 100%;
 }
 
 .phoneInput::placeholder {
@@ -249,7 +251,6 @@
 .rightSection {
   width: 40%;
   position: relative;
-  background: red;
 }
 .phoneImage {
   height: 100%;
@@ -294,9 +295,9 @@
     padding: 1rem;
   }
 
-  .contentWrapper {
+  .wrapper {
     max-width: 100%;
-    gap: 2rem;
+    gap: 3rem;
   }
 
   .title {
@@ -322,8 +323,8 @@
 }
 
 @media (max-width: 480px) {
-  .contentWrapper {
-    gap: 1.5rem;
+  .wrapper {
+    padding: 1rem;
   }
 
   .form {
