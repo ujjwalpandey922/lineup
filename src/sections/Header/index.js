@@ -2,10 +2,11 @@
 import Image from 'next/image';
 import styles from './index.module.css';
 import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const navTo = useRouter();
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
     document.body.classList.toggle('menu_open');
@@ -78,7 +79,7 @@ const Header = () => {
           ))}
           <div
             className={styles.header_right_container_item}
-            onClick={(e) => scrollToSection('join-us', e)}
+            onClick={() => navTo.push('/beta-signup')}
           >
             <div className={styles.header_right_container_item_button}>
               Join the waitlist

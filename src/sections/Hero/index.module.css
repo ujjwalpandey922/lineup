@@ -109,7 +109,19 @@
   -webkit-mask-position: center;
   mask-position: center;
 }
-
+@media (max-width: 750px) {
+  .lineup_text_video {
+    /* Use only LINEUP text as a mask */
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 200'%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dominant-baseline='central' font-family='Arial, sans-serif' font-size='180' font-weight='900' font-style='italic' fill='white'%3ELINEUP%3C/text%3E%3C/svg%3E");
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 200'%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dominant-baseline='central' font-family='Arial, sans-serif' font-size='180' font-weight='900' font-style='italic' fill='white'%3ELINEUP%3C/text%3E%3C/svg%3E");
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+  }
+}
 .hero_content_text_lineup {
   width: 100%;
   font-size: calc(var(--base-x) * 20);
@@ -136,36 +148,8 @@
   -webkit-text-stroke: 1px rgba(255, 255, 255, 0.05);
   text-stroke: 1px rgba(255, 255, 255, 0.05);
   user-select: none;
+  display: none;
 }
-
-/* Alternative approach using background-clip (fallback) */
-.lineup_text_container_alt {
-  position: relative;
-  display: inline-block;
-  margin-bottom: calc(var(--base-y) * 3.2);
-  background: url('/hero.mp4') center/cover;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: calc(var(--base-x) * 20);
-  font-style: italic;
-  font-weight: 900;
-}
-
-/* .hero_content_text > div:first-child{
-    font-size: calc(var(--base-x) * 20);
-    font-style: italic;
-    color: #d9d9d931;
-    font-weight: 900;
-    mix-blend-mode: multiply;
-}
-
-.hero_content_text > div:last-child{
-    font-size:calc(var(--base-x) * 2);
-    font-weight: 500;
-    color: #d9d9d927;
-    mix-blend-mode: multiply;
-} */
 
 .hero_content_button > div {
   font-size: calc(var(--base-x) * 2);
@@ -236,16 +220,19 @@
   }
 
   .hero_content_text_subtitle {
-    /* font-size: calc(var(--base-x) * 1.8); */
     font-weight: 500;
+    font-size: 15px;
+    display: block;
+    color: #fff;
+    padding-top: 6rem;
   }
-
   .hero_content_text > div:last-child {
     font-size: calc(var(--base-x) * 1.5);
     font-weight: 500;
   }
 
   .hero_content_button > div {
+    margin-top: 2rem;
     font-size: calc(var(--base-x) * 1.5);
     font-weight: 600;
     padding: calc(var(--base-y) * 1.2) calc(var(--base-y) * 2.1);

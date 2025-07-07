@@ -34,37 +34,25 @@ const SlideShow = () => {
 
   return (
     <>
-      <Header />
+      {<Header />}
       <div className="slideshow-container">
         <div className="slide" id="home">
-          <Hero />
+          {<Hero />}
         </div>
         {!isMobile && (
           <>
-            <div className="slide">
-              <NewEra />
-            </div>
-            <div className="slide">
-              <ForOrgs />
-            </div>
-            <div className="slide">
-              <ForMembers />
-            </div>
+            <div className="slide">{<NewEra />}</div>
+            <div className="slide">{<ForOrgs />}</div>
+            <div className="slide">{<ForMembers />}</div>
           </>
         )}
         {isMobile && (
           <>
-            <div className="slide">
-              <ForOrgsPhone />
-            </div>
-            <div className="slide">
-              <ForMembersPhone />
-            </div>
+            <div className="slide">{<ForOrgsPhone />}</div>
+            <div className="slide">{<ForMembersPhone />}</div>
           </>
         )}
-        <div id="lineup-app">
-          <LineUpApp />
-        </div>
+        <div id="lineup-app">{<LineUpApp />}</div>
         <div className="slide" id="whos-lineup">
           <LineupFor />
         </div>

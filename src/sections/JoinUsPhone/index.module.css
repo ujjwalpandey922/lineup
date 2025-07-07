@@ -1,76 +1,90 @@
-.container{
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    position: relative;
-    background-color: #000;
-}
-.bg_video{
-    width: 100%;
-    height: 100%;
-    filter: blur(100px);
-    -webkit-filter: blur(100px);
-    background-color: #000;
+.container {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background-color: #000;
 }
 
-.content{
-    width: 100%;
-    height:100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-}
-.image_container{
-    width:calc(37.6 * var(--base-x));
-    height: calc(31 * var(--base-y));
-    position: relative;
-}
-.content{
-    display: flex;
-    flex-direction: column;
-    margin-top: calc(var(--base-y) * 10);
-    
-}
-.text_wrapper{
-    padding-left: 1rem;
-    margin-bottom: calc(6 * var(--base-y));
-}
-.heading{
-    font-size: calc(5 * var(--base-x));
-    font-weight: 700;
-    color: #D9D9D96E;
-    margin-bottom: calc(1.6 * var(--base-y));
-}
-.text{
-    text-align: left;
-}
-.description{
-    color: #D9D9D96E;
-    text-transform: uppercase;
-    font-size: calc(1.5 * var(--base-x));
-    font-weight: 700;
-    width: calc(31.4 * var(--base-x));
+/* Background blurred video */
+.bg_video {
+  width: 100%;
+  height: 100%;
+  filter: blur(100px);
+  -webkit-filter: blur(100px);
 }
 
-.image_wrapper{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: calc(var(--base-y) * 10);
+.bg_video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-.button_wrapper{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+/* Image section */
+.image_wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  position: absolute;
+  bottom: 40%;
+  z-index: 2;
 }
-.button{
-    font-size: calc(1.5 * var(--base-x));
-    font-weight: 500;
-    color:#fff;
-    padding:calc(1.2 * var(--base-y)) calc(2 * var(--base-x));
-    background-color: #D9D9D96E;
-    border-radius: 100px;
+
+.image_container {
+  width: calc(37.6 * var(--base-x));
+  height: calc(31 * var(--base-y));
+  position: relative;
+}
+
+/* Button */
+.button_wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 25%;
+  z-index: 3;
+}
+
+.button {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #fff;
+  padding: 1rem 2rem;
+  background-color: #d9d9d96e;
+  border-radius: 100px;
+  backdrop-filter: blur(4px);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #d9d9d9a0;
+}
+
+/* Masked video with text-shaped cutout */
+.masked_text_video {
+  position: absolute;
+  top: 5%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.masked_text_video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 500'%3E%3Cstyle%3Etext { font-family: Montserrat, sans-serif; }%3C/style%3E%3Ctext x='5%25' y='20%25' font-size='120' font-weight='900' fill='white'%3EJoin us now.%3C/text%3E%3Ctext x='5%25' y='45%25' font-size='70' font-weight='500' fill='white'%3E...and work with us to change%3C/text%3E%3Ctext x='5%25' y='60%25' font-size='70' font-weight='500'  fill='white'%3Ehow the world experience.%3C/text%3E%3C/svg%3E");
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 500'%3E%3Cstyle%3Etext { font-family: Montserrat, sans-serif; }%3C/style%3E%3Ctext x='5%25' y='20%25' font-size='120' font-weight='900' fill='white'%3EJoin us now.%3C/text%3E%3Ctext x='5%25' y='45%25' font-size='70' font-weight='500' fill='white'%3E...and work with us to change%3C/text%3E%3Ctext x='5%25' y='60%25' font-size='70' font-weight='500' fill='white'%3Ehow the world experience.%3C/text%3E%3C/svg%3E");
+
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: top left;
+  mask-position: top left;
 }

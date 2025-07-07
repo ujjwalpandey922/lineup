@@ -6,6 +6,7 @@
   display: flex;
   flex-direction: column;
   padding: 2rem;
+
   box-sizing: border-box;
   overflow: hidden;
 }
@@ -25,12 +26,16 @@
   height: calc(100% - 7rem); /* Account for heading space */
   gap: 1rem;
 }
-
+.phone_screens_wrapper {
+  width: 100%;
+  height: 60%;
+}
 .phone_screens {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  height: 50%;
+  height: 100%;
+  width: 100%;
   align-items: center;
 }
 
@@ -55,7 +60,6 @@
 }
 
 .text {
-  /* height: 40%; */
   display: flex;
   justify-content: center;
   align-items: start;
@@ -93,12 +97,13 @@
   .container {
     height: auto;
     min-height: 100vh;
+    gap: 3rem;
     padding: 1rem;
   }
 
   .heading {
     font-size: 1.8rem;
-    margin-bottom: 1rem;
+    margin-block: 1rem;
   }
 
   .content {
@@ -107,24 +112,36 @@
     height: auto;
     overflow: hidden;
   }
-
-  .phone_screens {
-    /* flex-direction: column; */
+  .phone_screens_wrapper {
     width: 100%;
-    height: 100%;
-    gap: 0.5rem;
-    overflow: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    padding-bottom: calc(var(--base-y) * 4); /* Space for custom scrollbar */
+  }
+  .phone_screens_wrapper::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+  .phone_screens {
+    display: flex;
+    width: fit-content;
   }
 
   .phone_screen {
-    min-width: 400px;
-    height: 500px;
+    /* flex: 0 0 80%; */
+    height: 400px;
+    width: 300px;
+    scroll-snap-align: center;
+    border-radius: 1rem;
+    /* overflow: hidden; */
+    transition: transform 0.3s ease;
   }
 
-  /* .active {
-        width: 90%;
-        height: 200px;
-    } */
+  .active {
+    /* flex: 0 0 85%;  */
+    height: 420px;
+  }
 
   .text {
     height: auto;
@@ -132,19 +149,23 @@
   }
 
   .text_content_heading {
-    font-size: 1.8rem;
+    font-size: 20px;
   }
 
   .text_content_subheading {
-    font-size: 1rem;
+    font-size: 9px;
   }
 
   .text_content_description {
-    font-size: 1rem;
+    font-size: 14px;
+  }
+
+  .phone_screens::-webkit-scrollbar {
+    display: none;
   }
 }
 
 /* Hide scrollbar for WebKit browsers */
-.phone_screens::-webkit-scrollbar {
+/* .phone_screens::-webkit-scrollbar {
   display: none;
-}
+} */

@@ -62,23 +62,25 @@ function LineupFor() {
       <div className={styles.heading}>Who's LineUp for?</div>
 
       <div className={styles.content}>
-        <div className={styles.phone_screens}>
-          {data.map((item, index) => (
-            <div
-              key={index}
-              className={`${styles.phone_screen} ${
-                activeScreen === index ? styles.active : ''
-              }`}
-              onClick={() => setActiveScreen(index)}
-            >
-              <Image
-                src={`/${item.heading.toLowerCase()}.png`}
-                alt={item.heading.toLowerCase()}
-                fill
-                style={{ objectFit: 'cover' }}
-              />
-            </div>
-          ))}
+        <div className={styles.phone_screens_wrapper}>
+          <div className={styles.phone_screens}>
+            {data.map((item, index) => (
+              <div
+                key={index}
+                className={`${styles.phone_screen} ${
+                  activeScreen === index ? styles.active : ''
+                }`}
+                onClick={() => setActiveScreen(index)}
+              >
+                <Image
+                  src={`/${item.heading.toLowerCase()}.png`}
+                  alt={item.heading.toLowerCase()}
+                  fill
+                  style={{ objectFit: 'cover' }}
+                />
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className={styles.text}>

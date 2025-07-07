@@ -57,8 +57,9 @@
   isolation: isolate;
 }
 .step_description {
-  font-size: 14px;
-  font-weight: 400;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 20px;
   text-align: center;
   color: #b9b9b9;
 }
@@ -68,9 +69,9 @@
   bottom: calc(15 * var(--base-y));
   left: 50%;
   transform: translateX(-50%);
-  width: 30%;
-  height: 6px;
-  border-radius: 3px;
+  width: 50%;
+  height: 8px;
+  border-radius: 100px;
   overflow: hidden;
 }
 
@@ -145,6 +146,9 @@
   isolation: isolate;
   width: 100%;
 }
+.step_title_text {
+  font-weight: 500;
+}
 @media (max-width: 768px) {
   .header_title {
     font-size: calc(var(--base-y) * 2);
@@ -154,5 +158,11 @@
   }
   .step {
     margin: 0 calc((100vw - (var(--base-x) * 25)) / 4);
+  }
+  .scrollbar_container {
+    bottom: 35%;
+  }
+  .container {
+    padding: 2rem;
   }
 }
