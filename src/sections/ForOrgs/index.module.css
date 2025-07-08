@@ -40,6 +40,7 @@
   font-style: italic;
   margin-bottom: calc(var(--base-y) * 2);
   isolation: isolate;
+  color: #ffffff3b;
 }
 .hero_video_wrapper {
   position: absolute;

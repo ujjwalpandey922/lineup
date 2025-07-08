@@ -163,6 +163,13 @@
   .header_right_container_item_button {
     display: none;
   }
+  .header_right_container_item:hover {
+    opacity: 50%;
+  }
+
+  .header_right_container_item::after {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 550px) {
@@ -171,12 +178,5 @@
     text-align: left;
     justify-content: flex-start;
     padding-left: calc(var(--base-x) * 4.5);
-  }
-  .header_right_container_item:hover {
-    opacity: 50%;
-  }
-
-  .header_right_container_item::after {
-    display: none;
   }
 }

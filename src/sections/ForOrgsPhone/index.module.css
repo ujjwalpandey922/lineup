@@ -126,6 +126,7 @@
   height: calc(2.6 * var(--base-y));
   mix-blend-mode: multiply;
   font-style: italic;
+  color: #d9d9d940;
 }
 .bottom_text_description {
   font-size: calc(var(--base-x) * 1);

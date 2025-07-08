@@ -36,6 +36,7 @@ const Header = () => {
 
       setIsMenuOpen(false);
       document.body.classList.remove('menu_open');
+      document.body.style.overflow = 'auto';
     }
   };
 
