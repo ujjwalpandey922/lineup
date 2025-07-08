@@ -2,6 +2,7 @@
 
 import { useRouter } from 'next/navigation';
 import styles from './ThankYouStep.module.css';
+import Image from 'next/image';
 
 const ThankYouStep = ({ onFinish }) => {
   const navTo = useRouter();
@@ -21,7 +22,7 @@ const ThankYouStep = ({ onFinish }) => {
           <div className={styles.leftSection}>
             {/* Logo */}
             <div className={styles.logoContainer}>
-              <img
+              <Image
                 src="/logo.png"
                 alt="LineUp Logo"
                 className={styles.logo}

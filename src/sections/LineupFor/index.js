@@ -59,7 +59,7 @@ function LineupFor() {
       transition={{ duration: 0.5 }}
       className={styles.container}
     >
-      <div className={styles.heading}>Who's LineUp for?</div>
+      <div className={styles.heading}>Who&apos;s LineUp for?</div>
 
       <div className={styles.content}>
         <div className={styles.phone_screens_wrapper}>

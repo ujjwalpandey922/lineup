@@ -39,7 +39,13 @@ const Card = ({ data, index, tab }) => {
                 className={styles.image}
               />
             ) : (
-              <img src={data.video} alt={data.title} className={styles.image} />
+              <Image
+                src={data.video}
+                alt={data.title}
+                className={styles.image}
+                width={500}
+                height={500}
+              />
             )}
             <div className={styles.imageOverlay}></div>
           </div>
