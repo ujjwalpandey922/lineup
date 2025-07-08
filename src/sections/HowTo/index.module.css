@@ -159,9 +159,6 @@
   .step {
     margin: 0 calc((100vw - (var(--base-x) * 25)) / 4);
   }
-  .scrollbar_container {
-    bottom: 35%;
-  }
   .container {
     padding: 2rem;
   }

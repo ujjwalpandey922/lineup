@@ -12,7 +12,7 @@
   /* overflow: hidden; */
 }
 .content_wrapper {
-  margin-top: calc(10.8 * var(--base-y));
+  margin-top: calc(2 * var(--base-y));
   width: 100%;
 }
 .middle_video_and_text {

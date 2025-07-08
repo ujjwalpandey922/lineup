@@ -24,7 +24,7 @@
   display: flex;
   flex-direction: column;
   height: calc(100% - 7rem); /* Account for heading space */
-  gap: 1rem;
+  /* gap: 1rem; */
 }
 .phone_screens_wrapper {
   width: 100%;
@@ -97,7 +97,7 @@
   .container {
     height: auto;
     min-height: 100vh;
-    gap: 3rem;
+    /* background-color: #fff; */
     padding: 1rem;
   }
 
@@ -118,7 +118,6 @@
     overflow-y: hidden;
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none; /* IE and Edge */
-    padding-bottom: calc(var(--base-y) * 4); /* Space for custom scrollbar */
   }
   .phone_screens_wrapper::-webkit-scrollbar {
     display: none; /* Chrome, Safari, Opera */
