@@ -15,6 +15,7 @@ const Hero = () => {
           playsInline
           className={styles.bg_video}
         ></video>
+        <div className={styles.blur_overlay}></div>
       </div>
       <div className={styles.hero_container}>
         <div className={styles.hero_content}>
@@ -36,7 +37,6 @@ const Hero = () => {
                 className={styles.lineup_text_video}
               />
             </div>
-            {/* <div><span ref={el} /></div> */}
           </div>
 
           <div

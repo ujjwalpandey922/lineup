@@ -20,7 +20,7 @@ const ForOrgs = () => {
               />
             </div>
             <span className={styles.container_text_title_text}>
-              FOR ORGANIZERS
+              FOR PROFESSIONALS
             </span>
           </div>
           <div className={styles.container_text_description}>

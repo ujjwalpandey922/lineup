@@ -52,7 +52,7 @@ const ForOrgsPhone = () => {
               ></video>
             </div>
             <div className={styles.bottom_text_heading_text}>
-              FOR ORGANIZERS
+              FOR PROFESSIONALS
             </div>
           </div>
           <div className={styles.bottom_text_description}>

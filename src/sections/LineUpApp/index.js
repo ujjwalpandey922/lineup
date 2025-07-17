@@ -39,7 +39,7 @@ const data = [
       title: 'Grow on LineUp',
       description:
         'As you create, promote, and use our features, we track key performance indicators (KPIs) and optimize your visibility in our algorithm to boost your opportunities and your credibility all around our network.',
-      video: '/organic.png',
+      video: ['/grow-on-lineup-1.png', '/grow-on-lineup-2.png'],
       isVideo: false,
     },
     {

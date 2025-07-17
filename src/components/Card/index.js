@@ -10,6 +10,7 @@ const Card = ({ data, index, tab }) => {
         zIndex: 30 + index,
         position: 'sticky',
         marginBottom: '20px', // Consistent small margin
+        top: 180 + (index + 1) * 20,
       }}
     >
       <div className={styles.cardContent}>
@@ -39,13 +40,34 @@ const Card = ({ data, index, tab }) => {
                 className={styles.image}
               />
             ) : (
-              <Image
-                src={data.video}
-                alt={data.title}
-                className={styles.image}
-                width={500}
-                height={500}
-              />
+              <>
+                {Array.isArray(data.video) ? (
+                  <div className={styles.ImageContainerArray}>
+                    <Image
+                      src={data.video[0]}
+                      alt={data.title}
+                      className={`${styles.image} ${styles.imageBack}`}
+                      width={500}
+                      height={500}
+                    />
+                    <Image
+                      src={data.video[1]}
+                      alt={data.title}
+                      className={`${styles.image} ${styles.imageFront}`}
+                      width={500}
+                      height={500}
+                    />
+                  </div>
+                ) : (
+                  <Image
+                    src={data.video}
+                    alt={data.title}
+                    className={styles.image}
+                    width={500}
+                    height={500}
+                  />
+                )}
+              </>
             )}
             <div className={styles.imageOverlay}></div>
           </div>

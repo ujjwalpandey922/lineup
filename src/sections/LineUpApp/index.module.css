@@ -23,7 +23,7 @@
 
 .navigation {
   position: sticky;
-  top: calc(var(--base-y) * 16.6);
+  top: calc(var(--base-y) * 10.6);
   width: 100%;
   margin-bottom: 4rem;
   background-color: #000000;

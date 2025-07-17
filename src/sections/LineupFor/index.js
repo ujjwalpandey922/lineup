@@ -28,23 +28,23 @@ function LineupFor() {
       heading: 'Labels',
       subheading: 'Music labels, event labels or brands',
       description:
-        'Showcase your talents, connect with venues and organizers, land new gigs—and launch your own events to grow your audience.',
+        'Showcase your talents, connect with venues and professionals, land new gigs—and launch your own events to grow your audience.',
     },
     {
       heading: 'Venues',
       subheading: 'nightclub, bar, restaurant, or any venue.',
       description:
-        'List your space, get discovered by top organizers, and book DJs or collectives to fill your venue. Set up entries, sell out nights, and own your city.',
+        'List your space, get discovered by top professionals, and book DJs or collectives to fill your venue. Set up entries, sell out nights, and own your city.',
     },
     {
       heading: 'DJS',
       subheading: 'Speak for itself.',
       description:
-        "Get booked by the city's hottest organizers, grow your following, or throw your own shows—all from one platform.",
+        "Get booked by the city's hottest professionals, grow your following, or throw your own shows—all from one platform.",
     },
     {
       heading: 'Collectives',
-      subheading: 'Collectives of djs or event organizers',
+      subheading: 'Collectives of djs or event professionals',
       description:
         'Secure the perfect venue, collaborate with fellow artists, and score exclusive events—LineUp is where your next big night happens.',
     },
@@ -70,7 +70,7 @@ function LineupFor() {
                 className={`${styles.phone_screen} ${
                   activeScreen === index ? styles.active : ''
                 }`}
-                onClick={() => setActiveScreen(index)}
+                onMouseEnter={() => setActiveScreen(index)}
               >
                 <Image
                   src={`/${item.heading.toLowerCase()}.png`}
