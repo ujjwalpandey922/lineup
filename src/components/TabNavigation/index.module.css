@@ -18,6 +18,7 @@
   padding-bottom: calc(2.3 * var(--base-y));
   cursor: pointer;
   width: fit-content;
+  border-bottom: 3px solid transparent;
 }
 
 .tab_active {
@@ -27,16 +28,27 @@
 @media (max-width: 768px) {
   .tab {
     font-size: calc(1.5 * var(--base-x));
+    padding-bottom: calc(0.5 * var(--base-y));
+  }
+  .container {
+    display: flex;
+    justify-content: center;
   }
   .content {
     gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #fff;
+  }
+  .horizontal_line {
+    display: none;
   }
 }
 @media (max-width: 400px) {
   .tab {
     font-size: calc(1.33 * var(--base-x));
   }
-  .content {
+  /* .content {
     gap: 2rem;
-  }
+  } */
 }

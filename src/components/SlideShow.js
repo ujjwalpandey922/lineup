@@ -48,8 +48,8 @@ const SlideShow = () => {
         )}
         {isMobile && (
           <>
-            <div className="slide">{<ForOrgsPhone />}</div>
             <div className="slide">{<ForMembersPhone />}</div>
+            <div className="slide">{<ForOrgsPhone />}</div>
           </>
         )}
         <div id="lineup-app">{<LineUpApp />}</div>

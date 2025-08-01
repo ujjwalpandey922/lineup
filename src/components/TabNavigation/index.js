@@ -18,7 +18,7 @@ const TabNavigation = ({ onTabClick, currentTab }) => {
           }
           onClick={() => onTabClick(1)}
         >
-          For Event PROFESSIONALS
+          For Professionals
         </div>
         <div
           className={

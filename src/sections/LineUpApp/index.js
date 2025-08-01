@@ -39,12 +39,12 @@ const data = [
       title: 'Grow on LineUp',
       description:
         'As you create, promote, and use our features, we track key performance indicators (KPIs) and optimize your visibility in our algorithm to boost your opportunities and your credibility all around our network.',
-      video: ['/grow-on-lineup-1.png', '/grow-on-lineup-2.png'],
+      video: '/grow-on-lineup-together.png',
       isVideo: false,
     },
     {
       pretext_icon: '/social.png',
-      pretext_text: 'SOCIAL MEDIA PLATFORM ',
+      pretext_text: 'SOCIAL APP',
       title: 'Know more about the crowd',
       description:
         "Keep the vibe right. See who's attending, where they're from, and what they love—so you know the energy before you arrive.",
@@ -53,10 +53,10 @@ const data = [
     },
     {
       pretext_icon: '/social.png',
-      pretext_text: 'NETWORKING PLATFORM ',
+      pretext_text: 'NETWORKING APP',
       title: 'Connect with like minded people',
       description:
-        'Find events with people who share your story — your country, your culture, your passions. See where the energy is in your city and join in. Show up for the moments that matter, with the people who matter.',
+        "Connect with people who share your interests, background, and energy. Match, chat, and stay in the loop—see which events they're heading to and join the moments that bring your community together.",
       video: '/social_image.png',
       isVideo: false,
     },
@@ -111,7 +111,7 @@ const data = [
     },
     {
       pretext_icon: '/social.png',
-      pretext_text: 'SOCIAL MEDIA PLATFORM ',
+      pretext_text: 'SOCIAL APP ',
       title: 'Know more about the crowd',
       description:
         "Keep the vibe right. See who's attending, where they're from, and what they love—so you know the energy before you arrive.",
@@ -120,10 +120,10 @@ const data = [
     },
     {
       pretext_icon: '/social.png',
-      pretext_text: 'NETWORKING PLATFORM ',
+      pretext_text: 'NETWORKING APP ',
       title: 'Connect with like minded people',
       description:
-        'Find events with people who share your story — your country, your culture, your passions. See where the energy is in your city and join in. Show up for the moments that matter, with the people who matter.',
+        "Connect with people who share your interests, background, and energy. Match, chat, and stay in the loop—see which events they're heading to and join the moments that bring your community together.",
       video: '/social_image.png',
       isVideo: false,
     },

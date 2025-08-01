@@ -97,13 +97,13 @@
   .container {
     height: auto;
     min-height: 100vh;
-    /* background-color: #fff; */
     padding: 1rem;
   }
 
   .heading {
     font-size: 1.8rem;
     margin-block: 1rem;
+    text-align: center;
   }
 
   .content {
@@ -112,33 +112,34 @@
     height: auto;
     overflow: hidden;
   }
+
   .phone_screens_wrapper {
     width: 100%;
     overflow-x: auto;
     overflow-y: hidden;
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none; /* IE and Edge */
+    scroll-snap-type: x mandatory; /* Enable snap scrolling */
   }
   .phone_screens_wrapper::-webkit-scrollbar {
     display: none; /* Chrome, Safari, Opera */
   }
+
   .phone_screens {
     display: flex;
     width: fit-content;
+    scroll-snap-type: x mandatory; /* Enable snap scrolling */
   }
 
   .phone_screen {
-    /* flex: 0 0 80%; */
     height: 400px;
     width: 300px;
     scroll-snap-align: center;
     border-radius: 1rem;
-    /* overflow: hidden; */
     transition: transform 0.3s ease;
   }
 
   .active {
-    /* flex: 0 0 85%;  */
     height: 420px;
   }
 
@@ -159,8 +160,9 @@
     font-size: 14px;
   }
 
-  .phone_screens::-webkit-scrollbar {
-    display: none;
+  /* Disable hover scale effect on mobile */
+  .phone_screen:hover {
+    transform: none;
   }
 }
 

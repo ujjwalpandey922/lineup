@@ -25,7 +25,7 @@ const Hero = () => {
               {/* Text that defines the shape */}
               <div className={styles.hero_content_text_lineup}>LINEUP</div>
               <div className={styles.hero_content_text_subtitle}>
-                The first all in one hub for event organization
+                the new era of human experiences
               </div>
               {/* Clear video that will be masked by the text shape */}
               <video

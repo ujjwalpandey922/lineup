@@ -1,13 +1,27 @@
 'use client';
+import useWindowWidth from '@/hooks/useWindowWidth';
 import styles from './index.module.css';
-import { useEffect, useRef, useState, useCallback, useMemo } from 'react';
-
+import { useEffect, useRef, useCallback, useMemo } from 'react';
+// Video component to avoid repetition
+const VideoBackground = ({ className }) => (
+  <div className={styles.hero_video_wrapper}>
+    <video
+      src="how_to.mp4"
+      autoPlay
+      muted
+      loop
+      playsInline
+      className={className}
+    />
+  </div>
+);
 const HowTo = () => {
   const contentWrapperRef = useRef(null);
   const scrollbarRef = useRef(null);
   const scrollbarThumbRef = useRef(null);
-  const [title, setTitle] = useState('HOW TO CREATE EVENTS ON LINEUP?');
+  const width = useWindowWidth();
 
+  const isMobile = width < 768;
   // Step data array - moved outside component to prevent recreation on every render
   const stepsData = useMemo(
     () => [
@@ -51,18 +65,6 @@ const HowTo = () => {
     []
   );
 
-  // Memoized title calculation
-  const getTitle = useCallback((width) => {
-    return width < 768
-      ? 'CREATING EVENTS ON LINEUP'
-      : 'HOW TO CREATE EVENTS ON LINEUP?';
-  }, []);
-
-  // Optimized resize handler
-  const handleResize = useCallback(() => {
-    setTitle(getTitle(window.innerWidth));
-  }, [getTitle]);
-
   // Optimized scroll handler
   const handleScroll = useCallback(() => {
     const contentWrapper = contentWrapperRef.current;
@@ -83,20 +85,6 @@ const HowTo = () => {
     }px)`;
   }, []);
 
-  // Video component to avoid repetition
-  const VideoBackground = ({ className }) => (
-    <div className={styles.hero_video_wrapper}>
-      <video
-        src="how_to.mp4"
-        autoPlay
-        muted
-        loop
-        playsInline
-        className={className}
-      />
-    </div>
-  );
-
   // Step component for better organization
   const Step = ({ step }) => (
     <div className={styles.step}>
@@ -112,13 +100,6 @@ const HowTo = () => {
     </div>
   );
 
-  // Resize effect
-  useEffect(() => {
-    handleResize(); // Set initial title
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, [handleResize]);
-
   // Scroll effect
   useEffect(() => {
     const contentWrapper = contentWrapperRef.current;
@@ -131,28 +112,68 @@ const HowTo = () => {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <div className={styles.header_title}>{title}</div>
+        <div className={styles.header_title}>
+          {' '}
+          {isMobile
+            ? 'HOW TO CREATE EVENTS?'
+            : 'HOW TO CREATE EVENTS ON LINEUP?'}
+        </div>
       </div>
       <div className={styles.content}>
-        <div className={styles.content_wrapper} ref={contentWrapperRef}>
-          <div className={styles.content_box}>
-            {stepsData.map((step) => (
-              <Step key={step.id} step={step} />
-            ))}
-          </div>
-        </div>
-        <div className={styles.scrollbar_container}>
-          <VideoBackground className={styles.scrollbar_video} />
-          <div className={styles.custom_scrollbar} ref={scrollbarRef}>
-            <div
-              className={styles.scrollbar_thumb}
-              ref={scrollbarThumbRef}
-            ></div>
-          </div>
-        </div>
+        {isMobile ? (
+          <MobileSteps steps={stepsData} />
+        ) : (
+          <>
+            {/* original desktop scrollable steps with videos */}
+            <div className={styles.content_wrapper} ref={contentWrapperRef}>
+              <div className={styles.content_box}>
+                {stepsData.map((step) => (
+                  <Step key={step.id} step={step} />
+                ))}
+              </div>
+            </div>
+            <div className={styles.scrollbar_container}>
+              <VideoBackground className={styles.scrollbar_video} />
+              <div className={styles.custom_scrollbar} ref={scrollbarRef}>
+                <div
+                  className={styles.scrollbar_thumb}
+                  ref={scrollbarThumbRef}
+                ></div>
+              </div>
+            </div>
+          </>
+        )}
       </div>
     </div>
   );
 };
 
 export default HowTo;
+const MobileSteps = ({ steps }) => {
+  return (
+    <div className={styles.mobileStepsContainer}>
+      {steps.map((step, i) => (
+        <div
+          key={step.id}
+          className={`${styles.mobileStep} ${
+            i % 2 === 0 ? styles.textLeft : styles.textRight
+          }`}
+        >
+          <div className={styles.mobileStepNumber}>
+            <VideoBackground className={styles.mobileHeroVideo} />
+            <span className={styles.mobileStepNumberText}>
+              {step.id}. {step.title} {i === 2 && <span>optional</span>}
+            </span>
+          </div>
+          <div
+            className={`${styles.mobileStepDescription} ${
+              i % 2 !== 0 ? styles.marginLeftAuto : styles.marginRightAuto
+            }`}
+          >
+            {step.description}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+};

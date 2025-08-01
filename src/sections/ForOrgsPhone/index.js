@@ -13,7 +13,7 @@ const ForOrgsPhone = () => {
         <div className={styles.middle_video_and_text}>
           <div className={styles.middle_video_and_text_video}>
             <video
-              src="organizers.mp4"
+              src="Professional_video_v2.mp4"
               autoPlay
               muted
               loop
@@ -21,29 +21,13 @@ const ForOrgsPhone = () => {
               className={styles.middle_video_and_text_video_video}
             ></video>
           </div>
-          <div className={styles.middle_video_and_text_text}>
-            <div>
-              <div className={styles.middle_video_bg}>
-                <video
-                  src="organizers.mp4"
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  className={styles.middle_video_and_text_video_video}
-                ></video>
-              </div>
-              <div className={styles.middle_video_and_text_text_heading}>
-                <div>ALL IN ONE</div>
-              </div>
-            </div>
-          </div>
+          {/* // SOCIAL TEXT THAT WAS AT THE RIGHT HAND SIDE */}
         </div>
         <div className={styles.bottom_text}>
           <div className={styles.bottom_text_heading}>
             <div className={styles.bottom_text_bg_video}>
               <video
-                src="organizers.mp4"
+                src="Professional_video_v2.mp4"
                 autoPlay
                 muted
                 loop
@@ -52,7 +36,7 @@ const ForOrgsPhone = () => {
               ></video>
             </div>
             <div className={styles.bottom_text_heading_text}>
-              FOR PROFESSIONALS
+              FOR PROFESSIONALS.
             </div>
           </div>
           <div className={styles.bottom_text_description}>
@@ -68,3 +52,22 @@ const ForOrgsPhone = () => {
 };
 
 export default ForOrgsPhone;
+{
+  /* <div className={styles.middle_video_and_text_text}>
+            <div>
+              <div className={styles.middle_video_bg}>
+                <video
+                  src="organizers.mp4"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className={styles.middle_video_and_text_video_video}
+                ></video>
+              </div>
+              <div className={styles.middle_video_and_text_text_heading}>
+                <div>ALL IN ONE</div>
+              </div>
+            </div>
+          </div> */
+}

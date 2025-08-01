@@ -21,23 +21,7 @@ const ForMembersPhone = () => {
               className={styles.middle_video_and_text_video_video}
             ></video>
           </div>
-          <div className={styles.middle_video_and_text_text}>
-            <div>
-              <div className={styles.middle_video_bg}>
-                <video
-                  src="hero.mp4"
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  className={styles.middle_video_and_text_video_video}
-                ></video>
-              </div>
-              <div className={styles.middle_video_and_text_text_heading}>
-                <div>SOCIAL</div>
-              </div>
-            </div>
-          </div>
+          {/* SOCIAL TEXT THAT WAS AT THE RIGHT HAND SIDE  */}
         </div>
         <div className={styles.bottom_text}>
           <div className={styles.bottom_text_heading}>
@@ -66,3 +50,20 @@ const ForMembersPhone = () => {
 };
 
 export default ForMembersPhone;
+// <div className={styles.middle_video_and_text_text}>
+//           <div>
+//             <div className={styles.middle_video_bg}>
+//               <video
+//                 src="hero.mp4"
+//                 autoPlay
+//                 muted
+//                 loop
+//                 playsInline
+//                 className={styles.middle_video_and_text_video_video}
+//               ></video>
+//             </div>
+//             <div className={styles.middle_video_and_text_text_heading}>
+//               <div>SOCIAL</div>
+//             </div>
+//           </div>
+//         </div>

@@ -1,7 +1,8 @@
 'use client';
+
 import Image from 'next/image';
 import styles from './index.module.css';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
@@ -11,6 +12,58 @@ function LineupFor() {
     triggerOnce: true,
     threshold: 0.2,
   });
+
+  const screensWrapperRef = useRef(null);
+  const phoneScreenRefs = useRef([]);
+
+  // Reset refs (clears array) on every render
+  phoneScreenRefs.current = [];
+
+  const addToRefs = (el) => {
+    if (el && !phoneScreenRefs.current.includes(el)) {
+      phoneScreenRefs.current.push(el);
+    }
+  };
+
+  // Scroll handler to update activeScreen on mobile scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!screensWrapperRef.current) return;
+      if (window.innerWidth > 768) return; // Only run on mobile sizes
+
+      const wrapper = screensWrapperRef.current;
+      const wrapperRect = wrapper.getBoundingClientRect();
+      const centerX = wrapperRect.left + wrapperRect.width / 2;
+
+      let closestIndex = 0;
+      let closestDistance = Infinity;
+
+      phoneScreenRefs.current.forEach((el, index) => {
+        const rect = el.getBoundingClientRect();
+        const elCenterX = rect.left + rect.width / 2;
+        const distance = Math.abs(centerX - elCenterX);
+        if (distance < closestDistance) {
+          closestDistance = distance;
+          closestIndex = index;
+        }
+      });
+
+      if (closestIndex !== activeScreen) {
+        setActiveScreen(closestIndex);
+      }
+    };
+
+    const refCurrent = screensWrapperRef.current;
+    if (refCurrent) {
+      refCurrent.addEventListener('scroll', handleScroll, { passive: true });
+    }
+
+    return () => {
+      if (refCurrent) {
+        refCurrent.removeEventListener('scroll', handleScroll);
+      }
+    };
+  }, [activeScreen]);
 
   const variants = {
     hidden: { opacity: 0, y: 50 },
@@ -62,7 +115,7 @@ function LineupFor() {
       <div className={styles.heading}>Who&apos;s LineUp for?</div>
 
       <div className={styles.content}>
-        <div className={styles.phone_screens_wrapper}>
+        <div className={styles.phone_screens_wrapper} ref={screensWrapperRef}>
           <div className={styles.phone_screens}>
             {data.map((item, index) => (
               <div
@@ -70,7 +123,10 @@ function LineupFor() {
                 className={`${styles.phone_screen} ${
                   activeScreen === index ? styles.active : ''
                 }`}
-                onMouseEnter={() => setActiveScreen(index)}
+                onMouseEnter={() => {
+                  if (window.innerWidth > 768) setActiveScreen(index);
+                }}
+                ref={addToRefs}
               >
                 <Image
                   src={`/${item.heading.toLowerCase()}.png`}
