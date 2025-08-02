@@ -191,7 +191,7 @@
   }
 
   .title {
-    font-size: 20px;
+    font-size: 16px;
   }
 
   .imageContainer {
@@ -218,6 +218,6 @@
 
 @media (max-width: 480px) {
   .cardContent {
-    padding: 0;
+    padding: 1.5rem;
   }
 }

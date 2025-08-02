@@ -213,7 +213,9 @@
   animation: marquee 20s linear infinite;
   will-change: transform;
 }
-
+.bg_video_mobile_button {
+  display: none;
+}
 @keyframes marquee {
   0% {
     transform: translateX(0);
@@ -257,13 +259,37 @@
     font-weight: 500;
   }
 
+  .hero_content_button {
+    margin-top: calc(var(--base-y) * 2);
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+  }
+
   .hero_content_button > div {
-    margin-top: 2rem;
+    position: relative;
     font-size: calc(var(--base-x) * 1.5);
     font-weight: 600;
     padding: calc(var(--base-y) * 1.2) calc(var(--base-y) * 2.1);
+    background-color: #d9d9d96e;
+    z-index: 1;
   }
-
+  .bg_video_mobile_button {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: max-content;
+    border-radius: 20px;
+    z-index: 0;
+    /* backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(12px); */
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+  }
   .hero_marquee {
     font-size: calc(var(--base-x) * 1);
   }

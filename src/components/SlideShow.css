@@ -1,31 +1,30 @@
 /* Main container */
-.slideshow-container {
+/* .slideshow-container {
   position: relative;
-}
+} */
 
 /* Sticky full-screen slide section */
-.slide {
+/* .slide {
   position: sticky;
   top: 0;
   height: 100vh;
-}
-/* TODO  */
-/* .slideshow-container {
+} */
+
+.slideshow-container {
   height: 100vh;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
-  display: flex;
-  flex-direction: column;
-  scrollbar-width: none;  
-}
-
-.slideshow-container::-webkit-scrollbar {
-  display: none;
 }
 
 .slide {
-  height: 100vh;
+  height: 100vh; /* or min-height: 100vh */
   scroll-snap-align: start;
-  flex-shrink: 0;
-} */
+}
+#lineup-app.slideNew {
+  /* height: 100vh; */
+  /* min-height: 100vh; */
+  scroll-snap-align: start;
+  display: flex; /* To let inner content use flex */
+  flex-direction: column;
+}

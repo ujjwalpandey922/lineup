@@ -37,6 +37,14 @@ const JoinUsPhone = () => {
           onClick={() => navTo.push('/beta-signup')}
         >
           <div className={styles.button_text}>Join the waitlist</div>
+          <video
+            src="hero.mp4"
+            autoPlay
+            muted
+            loop
+            playsInline
+            className={styles.button_text_mobile_button}
+          ></video>
         </div>
       </div>
     </div>

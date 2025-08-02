@@ -28,7 +28,9 @@ const Card = ({ data, index, tab }) => {
             <span className={styles.pretextText}>{data.pretext_text}</span>
           </div>
           <h2 className={styles.title}>{data.title}</h2>
-          <p className={styles.description}>{data.description}</p>
+          <p className={styles.description}>
+            {width > 768 ? data.description : data.phoneDescription}
+          </p>
         </div>
         <div className={styles.mediaSection}>
           <div className={styles.imageContainer}>

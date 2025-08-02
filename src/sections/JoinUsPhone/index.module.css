@@ -45,7 +45,27 @@
   margin-top: 5rem;
   z-index: 3;
 }
-
+.button_text_mobile_button {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: max-content;
+  border-radius: 20px;
+  z-index: 0;
+  background-color: #d9d9d96e;
+  /* backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(12px); */
+  filter: blur(4px);
+  -webkit-filter: blur(4px);
+}
+.button_text {
+  z-index: 2;
+  position: relative;
+}
 .button {
   font-size: 1.2rem;
   font-weight: 500;
@@ -56,6 +76,7 @@
   backdrop-filter: blur(4px);
   cursor: pointer;
   transition: background-color 0.3s ease;
+  overflow: hidden;
 }
 
 .button:hover {

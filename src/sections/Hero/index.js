@@ -1,9 +1,11 @@
 'use client';
 import { useRouter } from 'next/navigation';
 import styles from './index.module.css';
+import useWindowWidth from '@/hooks/useWindowWidth';
 
 const Hero = () => {
   const router = useRouter();
+  // const width = useWindowWidth();
   return (
     <div className={styles.hero}>
       <div className={styles.bg_video_wrapper}>
@@ -44,6 +46,14 @@ const Hero = () => {
             onClick={() => router.push('/beta-signup')}
           >
             <div>Join the waitlist</div>
+            <video
+              src="hero.mp4"
+              autoPlay
+              muted
+              loop
+              playsInline
+              className={styles.bg_video_mobile_button}
+            ></video>
           </div>
         </div>
         <div className={styles.hero_marquee}>

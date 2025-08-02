@@ -12,6 +12,8 @@ const data = [
       title: 'Start selling tickets in seconds',
       description:
         'Personalize your event, publish, sell and scan tickets on one app. Allocate other LineUp users to scan tickets for you.',
+      phoneDescription:
+        'Send customize invites to your event, sell and scan tickets—all in one app. Assign other LineUp users to help with check-ins.',
       video: '/phone.mp4',
       isVideo: true,
     },
@@ -21,6 +23,8 @@ const data = [
       title: 'All in one booking',
       description:
         'Easily book DJs, collectives, or venues —with chat, payments, and insurance built in. Cover costs through expected ticket revenue—no more upfront expenses required for venues or performers.',
+      phoneDescription:
+        'Book DJs, collectives, or venues with built-in chat, payments, and insurance. Cover costs through projected ticket sales—no upfront fees needed.',
       video: '/all_in_one.mp4',
       isVideo: true,
     },
@@ -30,6 +34,8 @@ const data = [
       title: 'Turn Members Into Promoters',
       description:
         'LineUp members can share events. When a sale is made through their link or profile, they automatically earn a referral commission.',
+      phoneDescription:
+        'LineUp members earn commission every time someone buys a ticket through their link or profile.',
       video: '/affiliate_poster.png',
       isVideo: false,
     },
@@ -39,6 +45,8 @@ const data = [
       title: 'Grow on LineUp',
       description:
         'As you create, promote, and use our features, we track key performance indicators (KPIs) and optimize your visibility in our algorithm to boost your opportunities and your credibility all around our network.',
+      phoneDescription:
+        'As you create and promote events, we track key metrics to boost your visibility and credibility across the platform.',
       video: '/grow-on-lineup-together.png',
       isVideo: false,
     },
@@ -49,6 +57,8 @@ const data = [
       description:
         "Keep the vibe right. See who's attending, where they're from, and what they love—so you know the energy before you arrive.",
       video: '/social.mp4',
+      phoneDescription:
+        'Feel the vibe. See who’s going, where they’re from, and what they’re into—before you even show up.',
       isVideo: true,
     },
     {
@@ -57,6 +67,8 @@ const data = [
       title: 'Connect with like minded people',
       description:
         "Connect with people who share your interests, background, and energy. Match, chat, and stay in the loop—see which events they're heading to and join the moments that bring your community together.",
+      phoneDescription:
+        'Match with like-minded people, stay connected, and see which events they’re heading to next.',
       video: '/social_image.png',
       isVideo: false,
     },
@@ -68,6 +80,8 @@ const data = [
       title: 'Start selling tickets in seconds',
       description:
         'Personalize your event, publish, sell and scan tickets on one app. Allocate other LineUp users to scan tickets for you.',
+      phoneDescription:
+        'Send customize invites to your event, sell and scan tickets—all in one app. Assign other LineUp users to help with check-ins.',
       video: '/phone.mp4',
       isVideo: true,
     },
@@ -78,6 +92,8 @@ const data = [
       description:
         'Easily book DJs, collectives, or venues —with chat, payments, and insurance built in. Cover costs through expected ticket revenue—no more upfront expenses required for venues or performers.',
       video: '/all_in_one.mp4',
+      phoneDescription:
+        'Book DJs, collectives, or venues with built-in chat, payments, and insurance. Cover costs through projected ticket sales—no upfront fees needed.',
       isVideo: true,
     },
     {
@@ -86,6 +102,8 @@ const data = [
       title: 'Turn Members Into Promoters',
       description:
         'LineUp members can share events. When a sale is made through their link or profile, they automatically earn a referral commission.',
+      phoneDescription:
+        'LineUp members earn commission every time someone buys a ticket through their link or profile.',
       video: '/affiliate_poster.png',
       isVideo: false,
     },
@@ -96,6 +114,8 @@ const data = [
       description:
         'As you create, promote, and use our features, we track key performance indicators (KPIs) and optimize your visibility in our algorithm to boost your opportunities and your credibility all around our network.',
       video: '/organic.png',
+      phoneDescription:
+        'As you create and promote events, we track key metrics to boost your visibility and credibility across the platform.',
       isVideo: false,
     },
   ],
@@ -106,6 +126,8 @@ const data = [
       title: 'Turn Members Into Promoters',
       description:
         'LineUp members can share events. When a sale is made through their link or profile, they automatically earn a referral commission.',
+      phoneDescription:
+        'LineUp members earn commission every time someone buys a ticket through their link or profile.',
       video: '/affiliate_poster.png',
       isVideo: false,
     },
@@ -115,6 +137,8 @@ const data = [
       title: 'Know more about the crowd',
       description:
         "Keep the vibe right. See who's attending, where they're from, and what they love—so you know the energy before you arrive.",
+      phoneDescription:
+        'Feel the vibe. See who’s going, where they’re from, and what they’re into—before you even show up.',
       video: '/social.mp4',
       isVideo: true,
     },
@@ -124,6 +148,8 @@ const data = [
       title: 'Connect with like minded people',
       description:
         "Connect with people who share your interests, background, and energy. Match, chat, and stay in the loop—see which events they're heading to and join the moments that bring your community together.",
+      phoneDescription:
+        'Match with like-minded people, stay connected, and see which events they’re heading to next.',
       video: '/social_image.png',
       isVideo: false,
     },

@@ -34,9 +34,9 @@ const SlideShow = () => {
 
   return (
     <>
-      {<Header />}
       <div className="slideshow-container">
         <div className="slide" id="home">
+          {<Header />}
           {<Hero />}
         </div>
         {!isMobile && (
@@ -52,7 +52,9 @@ const SlideShow = () => {
             <div className="slide">{<ForOrgsPhone />}</div>
           </>
         )}
-        <div id="lineup-app">{<LineUpApp />}</div>
+        <div className="slideNew" id="lineup-app">
+          {<LineUpApp />}
+        </div>
         <div className="slide" id="whos-lineup">
           <LineupFor />
         </div>
