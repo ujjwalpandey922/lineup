@@ -56,3 +56,20 @@ html {
     --base-y: 10px;
   }
 }
+
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 10px;
+  background: #111; /* scrollbar track background */
+}
+::-webkit-scrollbar-thumb {
+  background: #343434; /* scrollbar thumb */
+  border-radius: 8px;
+  border: 2px solid #111; /* optional: inner border for definition */
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+::-webkit-scrollbar-corner {
+  background: #111;
+}
