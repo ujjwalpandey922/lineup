@@ -33,27 +33,47 @@ const Card = ({ data, index, tab }) => {
           </p>
         </div>
         <div className={styles.mediaSection}>
-          <div className={styles.imageContainer}>
-            {data.isVideo ? (
+          {data.title !== 'Turn Members Into Promoters' ? (
+            <div className={styles.imageContainer}>
+              {data.isVideo ? (
+                <video
+                  src={data.video}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className={styles.image}
+                />
+              ) : (
+                <Image
+                  src={data.video}
+                  alt={data.title}
+                  className={styles.image}
+                  width={500}
+                  height={500}
+                />
+              )}
+              <div className={styles.imageOverlay}></div>
+            </div>
+          ) : (
+            <div className={styles.imageContainer}>
               <video
                 src={data.video}
                 autoPlay
                 muted
                 loop
                 playsInline
-                className={styles.image}
+                className={styles.videoTurnMembersIntoPromoters}
               />
-            ) : (
               <Image
-                src={data.video}
+                src={data.photo}
                 alt={data.title}
-                className={styles.image}
+                className={styles.imageTurnMembersIntoPromoters}
                 width={500}
                 height={500}
               />
-            )}
-            <div className={styles.imageOverlay}></div>
-          </div>
+            </div>
+          )}
         </div>
       </div>
     </div>

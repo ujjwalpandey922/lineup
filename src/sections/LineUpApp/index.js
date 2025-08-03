@@ -36,8 +36,9 @@ const data = [
         'LineUp members can share events. When a sale is made through their link or profile, they automatically earn a referral commission.',
       phoneDescription:
         'LineUp members earn commission every time someone buys a ticket through their link or profile.',
-      video: '/affiliate_poster.png',
-      isVideo: false,
+      photo: '/affiliate_poster_bg_removed.png',
+      video: '/lineup-pink.mp4',
+      isVideo: true,
     },
     {
       pretext_icon: '/chart.png',
@@ -104,7 +105,8 @@ const data = [
         'LineUp members can share events. When a sale is made through their link or profile, they automatically earn a referral commission.',
       phoneDescription:
         'LineUp members earn commission every time someone buys a ticket through their link or profile.',
-      video: '/affiliate_poster.png',
+      photo: '/affiliate_poster_bg_removed.png',
+      video: '/lineup-pink.mp4',
       isVideo: false,
     },
     {
@@ -128,7 +130,8 @@ const data = [
         'LineUp members can share events. When a sale is made through their link or profile, they automatically earn a referral commission.',
       phoneDescription:
         'LineUp members earn commission every time someone buys a ticket through their link or profile.',
-      video: '/affiliate_poster.png',
+      photo: '/affiliate_poster_bg_removed.png',
+      video: '/lineup-pink.mp4',
       isVideo: false,
     },
     {
