@@ -23,7 +23,7 @@ const JoinUs = () => {
             <div className={styles.content}>
               <div className={styles.heading}>Join us now.</div>
               <div className={styles.description}>
-                …and work with us to change how the world experience.
+                Work with us to change how the world experience.
               </div>
             </div>
           </div>

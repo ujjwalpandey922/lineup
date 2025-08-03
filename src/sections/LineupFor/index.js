@@ -102,7 +102,18 @@ function LineupFor() {
         'Secure the perfect venue, collaborate with fellow artists, and score exclusive events—LineUp is where your next big night happens.',
     },
   ]);
-
+  useEffect(() => {
+    // Center the first item on mobile when component mounts
+    if (window.innerWidth <= 768 && screensWrapperRef.current) {
+      const wrapper = screensWrapperRef.current;
+      const firstItem = phoneScreenRefs.current[0];
+      if (firstItem) {
+        const itemWidth = firstItem.offsetWidth;
+        const wrapperWidth = wrapper.offsetWidth;
+        wrapper.scrollLeft = (itemWidth - wrapperWidth) / 2;
+      }
+    }
+  }, []);
   return (
     <motion.div
       ref={ref}

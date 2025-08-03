@@ -111,24 +111,26 @@
     flex-direction: column;
     height: auto;
     overflow: hidden;
+    /*  NEED THIS  */
+    margin: auto;
   }
 
-  .phone_screens_wrapper {
+  /* .phone_screens_wrapper {
     width: 100%;
     overflow-x: auto;
     overflow-y: hidden;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE and Edge */
-    scroll-snap-type: x mandatory; /* Enable snap scrolling */
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+    scroll-snap-type: x mandatory; 
   }
   .phone_screens_wrapper::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera */
+    display: none;
   }
 
   .phone_screens {
     display: flex;
     width: fit-content;
-    scroll-snap-type: x mandatory; /* Enable snap scrolling */
+    scroll-snap-type: x mandatory;
   }
 
   .phone_screen {
@@ -141,8 +143,40 @@
 
   .active {
     height: 420px;
+  } */
+  /* ----------------------NEW START  */
+  .phone_screens_wrapper {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-snap-type: x mandatory;
   }
 
+  .phone_screens {
+    display: flex;
+    width: 500%; /* 5 screens × 100% each */
+    height: 100%;
+    scroll-snap-type: x mandatory;
+    gap: inherit;
+  }
+
+  .phone_screen {
+    height: 400px;
+    width: 20%; /* Each screen takes 20% of 500% (1/5th) */
+    min-width: 20%; /* Ensure consistent width */
+    scroll-snap-align: center;
+    border-radius: 1rem;
+    transition: transform 0.3s ease;
+    flex: 0 0 20%; /* Don't grow or shrink, base width 20% */
+    box-sizing: border-box;
+  }
+
+  .active {
+    height: 420px;
+  }
+  /* ----------------------NEW END  */
   .text {
     height: auto;
     margin: 1rem 0;

@@ -130,7 +130,7 @@
   left: 0;
   width: 100%;
   background-color: #000;
-  color: #ffffff3b;
+  color: #ffffff;
   height: calc(2.6 * var(--base-y));
   mix-blend-mode: multiply;
   font-style: italic;
