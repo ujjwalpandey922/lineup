@@ -56,7 +56,7 @@ const Header = () => {
           style={{ cursor: 'pointer' }}
         >
           <Image
-            src="/logo.png"
+            src="/logo.svg"
             alt="logo"
             fill
             style={{ objectFit: 'cover' }}

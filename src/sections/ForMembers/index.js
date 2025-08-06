@@ -11,7 +11,7 @@ const ForMembers = () => {
           <div className={styles.container_text_title}>
             <div className={styles.hero_video_wrapper}>
               <video
-                src="members.mp4"
+                src="members_phone_whitebg.mp4"
                 autoPlay
                 muted
                 loop

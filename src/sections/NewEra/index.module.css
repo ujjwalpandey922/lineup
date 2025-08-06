@@ -1,4 +1,4 @@
-.container {
+/* .container {
   width: 100%;
   height: 100%;
   background-color: #000000;
@@ -18,16 +18,17 @@
   padding-left: calc(var(--base-x) * 4.1);
   padding-right: calc(var(--base-x) * 2.1);
   position: relative;
+  background-color: #000000;
 }
 .hero_video_wrapper {
-  position: relative;
-  top: calc(var(--base-y) * 10);
+  position: absolute;
   left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
 }
 .left_text {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   font-size: calc(var(--base-x) * 6);
@@ -35,7 +36,7 @@
   color: #d9d9d93b;
   text-align: left;
   width: calc(var(--base-x) * 61.2);
-  background-color: #000000;
+  background-color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -53,6 +54,68 @@
 }
 .right video {
   width: calc(var(--base-x) * 60);
-  transform: scale(1.6); /* 1.2 = 120% zoom */
+  transform: scale(1.6); 
+  transform-origin: center;
+} */
+.container {
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left {
+  width: 56%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #000000;
+}
+
+.hero_video {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures video covers the entire space */
+  z-index: 1;
+}
+
+.left_text {
+  position: relative;
+  font-size: calc(var(--base-x) * 6);
+  font-weight: 800;
+  color: #d9d9d93b;
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  mix-blend-mode: multiply;
+  padding-left: 2rem;
+  z-index: 2; /* Ensure text appears above video */
+}
+
+.right {
+  width: 44%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right video {
+  width: calc(var(--base-x) * 60);
+  transform: scale(1.6);
   transform-origin: center;
 }

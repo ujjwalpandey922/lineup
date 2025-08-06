@@ -27,7 +27,7 @@ const ForOrgsPhone = () => {
           <div className={styles.bottom_text_heading}>
             <div className={styles.bottom_text_bg_video}>
               <video
-                src="Professional_video_v2.mp4"
+                src="profess_mobile_whitebg.mp4"
                 autoPlay
                 muted
                 loop

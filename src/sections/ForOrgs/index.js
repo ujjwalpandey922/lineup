@@ -11,7 +11,7 @@ const ForOrgs = () => {
           <div className={styles.container_text_title}>
             <div className={styles.hero_video_wrapper}>
               <video
-                src="organizers.mp4"
+                src="profess_whitebg.mp4"
                 autoPlay
                 muted
                 loop

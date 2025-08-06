@@ -23,8 +23,8 @@
   align-items: center;
 }
 .header_logo {
-  height: calc(var(--base-y) * 3.4);
-  width: calc(var(--base-x) * 3.7);
+  height: 40px;
+  width: 40px;
   position: relative;
 }
 .header_right {
